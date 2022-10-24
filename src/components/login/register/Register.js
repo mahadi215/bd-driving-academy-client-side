@@ -4,11 +4,21 @@ import { Link } from 'react-router-dom';
 const Register = () => {
     return (
         <div >
-            <h1 className='text-center my-4'>Please Login</h1>
+            <h1 className='text-center my-4'>Please Sign Up</h1>
             <form className=' w-75 sm-w-100 m-auto p-3'>
                 <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label">Full Name</label>
+                    <input type="email" className='form-control' placeholder='Enter your name'required />
+
+                </div>
+                <div className="mb-3">
+                    <label for="exampleInputEmail1" className="form-label">Photo</label>
+                    <input type="email" className='form-control' placeholder='Enter your photo url' />
+
+                </div>
+                <div className="mb-3">
                     <label for="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" className='form-control' placeholder='Enter your email' />
+                    <input type="email" className='form-control' placeholder='Enter your email' required />
 
                 </div>
                 <div className="mb-3">
@@ -17,7 +27,7 @@ const Register = () => {
                 </div>
                 <div className="mb-3 form-check">
                     <input type="checkbox" />
-                    <label className="form-check-label" for="exampleCheck1">Remember me</label>
+                    <label className="form-check-label" for="exampleCheck1">Accept terms</label>
                 </div>
                 <button type="submit" className="btn btn-warning m-auto d-block w-50">Login</button>
 

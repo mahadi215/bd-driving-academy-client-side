@@ -6,6 +6,7 @@ import Cources from "../pages/courses/Cources"
 import Paq from "../pages/paq/Paq";
 import Blog from "../pages/blog/Blog";
 import Login from "../login/login/Login";
+import Register from "../login/register/Register";
 
 
 
@@ -38,6 +39,10 @@ export const routus = createBrowserRouter([
             {
                 path:'/login',
                 element:<Login></Login>
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             },
         ]
     }

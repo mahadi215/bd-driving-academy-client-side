@@ -1,0 +1,20 @@
+.categories-box{
+    background-color: #efefef;
+    padding: 10px;
+
+}
+.categorie-link{
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 20px;
+    width: 100%;
+    display: block;
+    color: #f8bf06;
+
+}
+.categorie-link:hover{
+    background-color: #f8bf06;
+    transition: 0.5s;
+    color: #000;
+     font-weight: bold;
+}

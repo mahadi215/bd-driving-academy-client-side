@@ -32,10 +32,11 @@ const Register = () => {
                 <button type="submit" className="btn btn-warning m-auto d-block w-50">Login</button>
 
                 <br />
-                <p>Already have an account...Please <Link to="/register">Login</Link></p>
+                <p>Already have an account...Please <Link to="/login">Login</Link></p>
 
 
                 <div className=' m-auto md-p-5' >
+                    <p className='text-center'><b>Or</b></p>
                     <div className='google-login py-2 d-flex align-items-center justify-content-center border  m-3'>
                         <i className=" me-3 fs-1 fa-brands fa-google"></i>
                         <h6>Continue with Google</h6>

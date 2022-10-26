@@ -24,7 +24,8 @@ export const routus = createBrowserRouter([
                 element:<About></About>
             },
             {
-                path:'/cources',
+                path:'/cources/:id',
+                loader:({params}) => fetch(`http://localhost:5000/categorie/${params.id}`),
                 element:<Cources></Cources>
             },
             {

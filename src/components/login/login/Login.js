@@ -30,6 +30,7 @@ const hello = () =>{
 
                 
                 <div className=' m-auto md-p-5' onClick={hello}>
+                <p className='text-center'><b>Or</b></p>
                     <div className='google-login py-2 d-flex align-items-center justify-content-center border  m-3'>
                     <i className=" me-3 fs-1 fa-brands fa-google"></i>
                         <h6>Continue with Google</h6>

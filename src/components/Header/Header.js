@@ -14,7 +14,7 @@ const Header = () => {
                         <div className="navbar-nav ms-auto">
                             <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
                             <Link to="/about" className="nav-link" >About Us</Link>
-                            <Link to="/cources" className="nav-link" >Cources</Link>
+                            <Link to="/cources/06" className="nav-link" >Cources</Link>
                             <Link to="/paq" className="nav-link ">PAQ</Link>
                             <Link to="/blog" className="nav-link ">Blog</Link>
                             <Link to="/login" className="nav-link ">Log in</Link>

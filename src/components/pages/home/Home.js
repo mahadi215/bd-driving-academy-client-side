@@ -13,7 +13,7 @@ const Home = () => {
             </section>
 
             <section className='container mt-5 '>
-                <h1 className='text-center text-warning mb-5'>Why Us</h1>
+                <h1 className='text-center text-warning mb-3'>Why Us</h1>
                 <div className='why-us-container row m-auto g-2 text-center'>
                     <div className='col-lg-6 col-sm-12 '>
                     <i className=" fa-solid fa-car"></i>
@@ -26,7 +26,7 @@ const Home = () => {
                         <p>Traffic Dept certified Instructors </p>
                     </div>
                     <div className='col-lg-6 col-sm-12 '>
-                    <i class="fa-solid fa-traffic-light"></i>
+                    <i className="fa-solid fa-traffic-light"></i>
                         <h4>Highest Passing Rate</h4>
                         <p>90% satisfied customers</p>
                     </div>
@@ -38,7 +38,7 @@ const Home = () => {
                 </div>
             </section>
 
-            
+
         </div>
     );
 };

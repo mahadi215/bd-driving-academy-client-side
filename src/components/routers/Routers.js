@@ -7,6 +7,7 @@ import Paq from "../pages/paq/Paq";
 import Blog from "../pages/blog/Blog";
 import Login from "../login/login/Login";
 import Register from "../login/register/Register";
+import CourseDetails from "../courseDetails/CourseDetails";
 
 
 
@@ -45,6 +46,12 @@ export const routus = createBrowserRouter([
                 path:'/register',
                 element:<Register></Register>
             },
+            {
+                path: '/courseDetails/:id',
+                element:<CourseDetails></CourseDetails>,
+                loader: ({params}) => fetch(`http://localhost:5000/s-cources/${params.id}`)
+                
+            }
         ]
     }
 ])

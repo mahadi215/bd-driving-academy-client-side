@@ -34,7 +34,7 @@ const Cources = () => {
                                                  }
                                                 </p>
 
-                                            <Link className="btn btn-warning">Details</Link>
+                                            <Link to={`/courseDetails/${courseCard.id}`} className="btn btn-warning">Details</Link>
                                         </div>
                                     </div>
                                     </div>

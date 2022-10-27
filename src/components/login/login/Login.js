@@ -1,11 +1,14 @@
 import { GoogleAuthProvider } from 'firebase/auth';
-import React, { useContext } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
 
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname  || '/';
+    const [error, setError] = useState('')
 
     const {providerLogin, signIn} = useContext(AuthContext)
     const googleProvider = new GoogleAuthProvider();
@@ -27,10 +30,13 @@ const Login = () => {
             .then(result =>{
                 const user = result.user
                 console.log(user);
+                setError('')
                 form.reset();
-                navigate('/')
+                navigate(from, { replace:true})
             })
-            .catch(e => console.error(e))
+            .catch(e => {
+                setError(e.message)
+            })
     }
 
     return (
@@ -51,6 +57,8 @@ const Login = () => {
                         <label className="form-check-label" for="exampleCheck1">Remember me</label>
                 </div>
                 <button type="submit" className="btn btn-warning m-auto d-block w-50">Login</button>
+                <br />
+                <p className='text-danger text-center'>{error}</p>
 
                 <br />
                 <p>Don't have an account?...Please <Link to="/register">Sign Up</Link></p>

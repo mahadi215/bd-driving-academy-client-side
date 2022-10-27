@@ -8,6 +8,7 @@ import Blog from "../pages/blog/Blog";
 import Login from "../login/login/Login";
 import Register from "../login/register/Register";
 import CourseDetails from "../courseDetails/CourseDetails";
+import PrivateRout from "../PrivateRoute/PrivateRout";
 
 
 
@@ -48,7 +49,7 @@ export const routus = createBrowserRouter([
             },
             {
                 path: '/courseDetails/:id',
-                element:<CourseDetails></CourseDetails>,
+                element:<PrivateRout><CourseDetails></CourseDetails></PrivateRout>,
                 loader: ({params}) => fetch(`http://localhost:5000/s-cources/${params.id}`)
                 
             }

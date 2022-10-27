@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Register = () => {
 
+    const [error, setError] = useState('')
     const {createUser} = useContext(AuthContext)
 
     const handleRegister = (event) =>{
@@ -20,7 +21,9 @@ const Register = () => {
             console.log(user);
             form.reset();
         })
-        .catch(error => console.error(error));
+        .catch(error => {
+            setError(error.message)
+        });
     }
     return (
         <div >
@@ -50,7 +53,8 @@ const Register = () => {
                     <label className="form-check-label" for="exampleCheck1">Accept terms</label>
                 </div>
                 <button type="submit" className="btn btn-warning m-auto d-block w-50">Submit</button>
-
+                    <br />
+                    <p className='text-danger text-center'>{error}</p>
                 <br />
                 <p>Already have an account...Please <Link to="/login">Login</Link></p>
 

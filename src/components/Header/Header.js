@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () =>{
+           logOut()
+           .then(() =>{})
+           .catch(error => console.log(error))
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg bg-light px-3">
@@ -16,8 +24,18 @@ const Header = () => {
                             <Link to="/about" className="nav-link" >About Us</Link>
                             <Link to="/cources/06" className="nav-link" >Cources</Link>
                             <Link to="/paq" className="nav-link ">PAQ</Link>
-                            <Link to="/blog" className="nav-link ">Blog</Link>
-                            <Link to="/login" className="nav-link ">Log in</Link>
+                            <Link to="/blog" className="nav-link me-4">Blog</Link>
+                            <Link className="nav-link ">
+                                {user?.uid ?
+                                <>
+                                <img className='rounded-circle'
+                                 style={{ height: '30px' }}
+                                 src={user?.photoURL} alt="profilePic" />
+                                 <button onClick={handleLogOut} className='btn'>Log Out</button>
+                                </>
+                                : <Link to="/login" className='nav-link'>login</Link>
+                                }
+                            </Link>
                             <Link to="" className="nav-link ">Dark/Light</Link>
                         </div>
                     </div>

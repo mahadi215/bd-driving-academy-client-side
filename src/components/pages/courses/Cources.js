@@ -13,7 +13,7 @@ const Cources = () => {
             <div className='container mt-3'>
                 <div className='row'>
                     <div className='col-md-3 col-sm-12 categories-box h-auto'>
-                        <h2>Categories</h2>
+                        <h2 className='text-center bg-warning rounded p-2'>Categories</h2>
                         <LeftNav></LeftNav>
                     </div>
                     <div className='col-md-8 col-sm-12'>
@@ -22,7 +22,7 @@ const Cources = () => {
                             allcourse.map(courseCard =>
                                 
                                     <div className='col-lg-4 col-md-6 col-sm-12' key={courseCard.id}>
-                                    <div className="card ">
+                                    <div className="card bg-dark text-white ">
                                         <img className="card-img-top card-img" src={courseCard.thum} alt="Cardcap" />
                                         <div className="card-body">
                                             <h5 className="card-title">{courseCard.title}</h5>
@@ -34,7 +34,7 @@ const Cources = () => {
                                                  }
                                                 </p>
 
-                                            <Link to={`/courseDetails/${courseCard.id}`} className="btn btn-warning">Details</Link>
+                                            <Link to={`/courseDetails/${courseCard.id}`} className="btn btn-warning d-block">Details</Link>
                                         </div>
                                     </div>
                                     </div>

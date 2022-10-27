@@ -16,7 +16,7 @@ const LeftNav = () => {
 
     return (
         <div>
-            <div className='categories-box'>
+            <div className='categories-box bg-dark'>
                 
                         {
                             categories.map(categorie => <p key={categorie.id}>

@@ -10,6 +10,7 @@ import Register from "../login/register/Register";
 import CourseDetails from "../courseDetails/CourseDetails";
 import PrivateRout from "../PrivateRoute/PrivateRout";
 import Booking from "../booking/Booking";
+import FourOFour from "../pages/FourO4/FourOFour";
 
 
 
@@ -58,6 +59,10 @@ export const routus = createBrowserRouter([
                 path: '/booking/:id',
                 element: <Booking></Booking>,
                 loader: ({params}) => fetch(`https://educational-app-server.vercel.app/s-cources/${params.id}`)
+            },
+            {
+                path:'*',
+                element:<FourOFour></FourOFour>
             }
         ]
     }

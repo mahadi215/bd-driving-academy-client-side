@@ -7,8 +7,10 @@ const Home = () => {
 
             <section className='top'>
                 <div className='header-title'>
-                    <h1>BD Driving Academy</h1>
+                   <div>
+                   <h1>BD Driving Academy</h1>
                     <p>Your getway to safe driving.</p>
+                   </div>
                 </div>
             </section>
 

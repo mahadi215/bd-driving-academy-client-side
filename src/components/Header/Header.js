@@ -12,14 +12,14 @@ const Header = () => {
     }
     return (
         <div>
-            <nav className="navbar navbar-expand-lg bg-light px-3">
+            <nav className="navbar navbar-expand-lg bg-warning  px-3">
                 <div className="container-fluid ">
-                    <Link className="navbar-brand">BD_Driving_Learning</Link>
+                    <Link className="navbar-brand text-white fw-bolder">BD_Driving_Learning</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div className="navbar-nav ms-auto">
+                        <div className="navbar-nav ms-auto fw-bold">
                             <Link to="/" className="nav-link active" aria-current="page" >Home</Link>
                             <Link to="/about" className="nav-link" >About Us</Link>
                             <Link to="/cources/06" className="nav-link" >Cources</Link>
@@ -36,7 +36,7 @@ const Header = () => {
                                 : <Link to="/login" className='nav-link'>login</Link>
                                 }
                             </Link>
-                            <Link to="" className="nav-link ">Dark/Light</Link>
+                            <button to="" className="nav-link ">Dark/Light</button>
                         </div>
                     </div>
                 </div>

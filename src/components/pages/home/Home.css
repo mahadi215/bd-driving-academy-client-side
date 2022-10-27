@@ -5,16 +5,26 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
+    
 }
 
 .header-title{
     font-size: 30px;
     text-align: center;
     color: #f8bf06;
+    padding: 20px;
+    background-color: rgba(0, 0, 0,0.8);
     font-family: 'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
 }
 .header-title h1{
     font-size: 5rem;

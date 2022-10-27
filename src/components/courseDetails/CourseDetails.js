@@ -15,7 +15,7 @@ const CourseDetails = () => {
                         <h3>Price: {singleCourse.price}</h3>
                     <p className="card-text "> {singleCourse.des} </p>
 
-                    <Link className="btn btn-warning fw-bold">Book</Link>
+                    <Link to={`/booking/${singleCourse.id}`} className="btn btn-warning fw-bold">Book</Link>
                 </div>
             </div>
         </div>

@@ -9,6 +9,7 @@ import Login from "../login/login/Login";
 import Register from "../login/register/Register";
 import CourseDetails from "../courseDetails/CourseDetails";
 import PrivateRout from "../PrivateRoute/PrivateRout";
+import Booking from "../booking/Booking";
 
 
 
@@ -27,7 +28,7 @@ export const routus = createBrowserRouter([
             },
             {
                 path:'/cources/:id',
-                loader:({params}) => fetch(`http://localhost:5000/categorie/${params.id}`),
+                loader:({params}) => fetch(`https://educational-app-server.vercel.app/categorie/${params.id}`),
                 element:<Cources></Cources>
             },
             {
@@ -50,8 +51,13 @@ export const routus = createBrowserRouter([
             {
                 path: '/courseDetails/:id',
                 element:<PrivateRout><CourseDetails></CourseDetails></PrivateRout>,
-                loader: ({params}) => fetch(`http://localhost:5000/s-cources/${params.id}`)
+                loader: ({params}) => fetch(`https://educational-app-server.vercel.app/s-cources/${params.id}`)
                 
+            },
+            {
+                path: '/booking/:id',
+                element: <Booking></Booking>,
+                loader: ({params}) => fetch(`https://educational-app-server.vercel.app/s-cources/${params.id}`)
             }
         ]
     }
